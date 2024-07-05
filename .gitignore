@@ -1,0 +1,6 @@
+qtile/__pycache__
+qtile/.mypy_cache
+tmux/plugins/
+lazy-lock.json
+vedant_linux.pem
+pat_*
