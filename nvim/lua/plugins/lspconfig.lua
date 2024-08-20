@@ -77,24 +77,10 @@ local config = function()
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>",
             opts
         )
-        vim.keymap.set("n", "<leader>ldd", function()
-            require("trouble").toggle("diagnostics")
-        end)
-        vim.keymap.set("n", "<leader>lq", function()
-            require("trouble").toggle("quickfix")
-        end)
-        vim.keymap.set("n", "<leader>ll", function()
-            require("trouble").toggle("loclist")
-        end)
-        vim.keymap.set("n", "gr", function()
-            require("trouble").toggle("lsp_references")
-        end)
     end
 
     local on_attach = function(client, bufnr)
         lsp_keymaps(bufnr)
-
-        vim.lsp.inlay_hint.enable(true)
 
         if client.name == "gopls" and not client.server_capabilities.semanticTokensProvider then
             local semantic = client.config.capabilities.textDocument.semanticTokens
