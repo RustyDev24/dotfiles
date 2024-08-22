@@ -13,6 +13,7 @@ local config = function()
         "eslint",
         "tailwindcss",
         "emmet_language_server",
+        "clangd",
     }
 
     local default_diagnostic_config = {

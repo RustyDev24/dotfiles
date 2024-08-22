@@ -36,6 +36,8 @@ return {
                 "tsserver",
                 "eslint-lsp",
                 "prettierd",
+                "clangd",
+                "clang-format",
             },
             auto_update = true,
         })
