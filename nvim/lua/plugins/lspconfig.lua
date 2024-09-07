@@ -5,7 +5,7 @@ local config = function()
     local servers = {
         "lua_ls",
         "cssls",
-        "gopls",
+        -- "gopls",
         "html",
         "pyright",
         "clangd",
