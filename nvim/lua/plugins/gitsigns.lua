@@ -4,12 +4,13 @@ return {
     opts = {
         -- See `:help gitsigns.txt`
         signs = {
-            add = { text = "+" },
-            change = { text = "~" },
-            delete = { text = "_" },
+            add = { text = "▒" },
+            change = { text = "▒" },
+            delete = { text = "▒" },
             topdelete = { text = "‾" },
-            changedelete = { text = "~" },
+            changedelete = { text = "▒" },
         },
+        --
         watch_gitdir = {
             follow_files = true,
         },
