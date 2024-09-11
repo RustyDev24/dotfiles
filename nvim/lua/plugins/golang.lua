@@ -3,11 +3,10 @@ return {
     dependencies = { -- optional packages
         "neovim/nvim-lspconfig",
         "nvim-treesitter/nvim-treesitter",
+        "ray-x/guihua.lua",
     },
     config = function()
-        require("go").setup({
-            lsp_cfg = true,
-        })
+        require("go").setup({})
     end,
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },

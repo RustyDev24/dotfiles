@@ -5,7 +5,7 @@ local config = function()
     local servers = {
         "lua_ls",
         "cssls",
-        -- "gopls",
+        "gopls",
         "html",
         "pyright",
         "clangd",
@@ -82,6 +82,8 @@ local config = function()
 
     local on_attach = function(client, bufnr)
         lsp_keymaps(bufnr)
+
+        vim.lsp.inlay_hint.enable(false) -- do not enable inlay hints by default
 
         if client.name == "gopls" and not client.server_capabilities.semanticTokensProvider then
             local semantic = client.config.capabilities.textDocument.semanticTokens
