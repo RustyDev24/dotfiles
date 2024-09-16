@@ -12,15 +12,6 @@ return {
                 upgrade_dependency = true,
                 vendor = true,
             },
-            hints = {
-                assignVariableTypes = true,
-                compositeLiteralFields = true,
-                compositeLiteralTypes = true,
-                constantValues = true,
-                functionTypeParameters = true,
-                parameterNames = true,
-                rangeVariableTypes = true,
-            },
             analyses = {
                 fieldalignment = true,
                 nilness = true,

@@ -4,3 +4,7 @@ lazyvim
 nvchad
 nvim_personal
 LICENSE
+.gitignore
+.gitmodules
+nvim_back
+.zshrc

@@ -1,14 +1,31 @@
 return {
-    "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
-    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-ui-select.nvim" },
-    config = function()
-        require("telescope").setup({
-            ["ui-select"] = {
-                require("telescope.themes").get_dropdown({}),
-            },
-        })
-        require("telescope").load_extension("ui-select")
-        require("telescope").load_extension("projects")
-    end,
+  "nvim-telescope/telescope.nvim",
+  keys = {
+    -- add a keymap to browse plugin files
+    -- stylua: ignore
+    {
+      "<leader>fp",
+      function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+      desc = "Find Plugin File",
+    },
+    {
+      "<leader>e",
+      "<cmd>Telescope file_browser<CR>",
+      desc = "file explorer",
+    },
+  },
+  -- change some options
+  opts = {
+    defaults = {
+      layout_strategy = "horizontal",
+      layout_config = { prompt_position = "top" },
+      sorting_strategy = "ascending",
+      winblend = 0,
+    },
+    extensions = {
+      file_browser = {
+        hijack_netrw = true,
+      },
+    },
+  },
 }

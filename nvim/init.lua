@@ -1,5 +1,2 @@
-require("user.options")
-require("user.remaps")
-require("user.lazy")
-
-vim.cmd.colorscheme("night-owl")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
