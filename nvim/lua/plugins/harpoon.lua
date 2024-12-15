@@ -9,10 +9,11 @@ return {
             save_on_toggle = true,
         },
     },
+    lazy = false,
     keys = function()
         local keys = {
             {
-                "<leader>a",
+                "<leader>ha",
                 function()
                     require("harpoon"):list():add()
                 end,

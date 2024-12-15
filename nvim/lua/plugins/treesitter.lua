@@ -3,11 +3,11 @@ return {
     build = ":TSUpdate",
     config = function() end,
     dependencies = {
-        "windwp/nvim-autopairs",
-        {
-            "nvim-treesitter/nvim-treesitter-textobjects",
-            event = "VeryLazy",
-        },
+        -- "windwp/nvim-autopairs",
+        -- {
+        --     "nvim-treesitter/nvim-treesitter-textobjects",
+        --     event = "VeryLazy",
+        -- },
         {
             "windwp/nvim-ts-autotag",
             event = "VeryLazy",

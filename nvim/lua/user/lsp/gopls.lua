@@ -23,6 +23,7 @@ return {
             staticcheck = true,
             directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
             semanticTokens = true,
+            completeFunctionCalls = false,
         },
     },
 }

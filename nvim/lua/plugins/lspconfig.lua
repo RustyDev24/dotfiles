@@ -13,6 +13,7 @@ local config = function()
         "tailwindcss",
         "emmet_language_server",
         "clangd",
+        "zls",
     }
 
     local default_diagnostic_config = {
@@ -77,6 +78,7 @@ local config = function()
             "<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>",
             opts
         )
+        -- keymap(bufnr, "i", "<C-h>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     end
 
     local on_attach = function(client, bufnr)
@@ -127,6 +129,13 @@ return {
         "hrsh7th/nvim-cmp",
         --        "creativenull/efmls-configs-nvim"
         { "j-hui/fidget.nvim", opts = {} },
+        {
+            "ray-x/lsp_signature.nvim",
+            opts = {},
+            config = function(_, opts)
+                require("lsp_signature").setup(opts)
+            end,
+        },
     },
     config = config,
     event = { "BufReadPre", "BufNewFile" },
