@@ -2,7 +2,7 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.fillchars = vim.opt.fillchars + "eob: "
 vim.opt.fillchars:append({
-    stl = " ",
+  stl = " ",
 })
 
 vim.opt.tabstop = 4
@@ -32,7 +32,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
-vim.opt.cmdheight = 1             -- more space in the neovim command line for displaying messages
+vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 
 vim.opt.swapfile = false
 vim.opt.conceallevel = 0
@@ -54,11 +54,9 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 if vim.g.neovide then
-    vim.o.guifont = "CommitMono"
-    vim.g.neovide_fullscreen = true
-    vim.g.neovide_refresh_rate = 144
-    vim.g.neovide_cursor_vfx_mode = "pixiedust"
-    vim.g.neovide_cursor_vfx_particle_density = 20.0
-    vim.g.neovide_cursor_vfx_particle_lifetime = 1.5
-    vim.g.neovide_transparency = 0.8
+  vim.o.guifont = "JetBrainsMono Nerd Font:h14"
+  vim.g.neovide_refresh_rate = 144
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+  vim.g.neovide_cursor_vfx_particle_density = 20.0
+  vim.g.neovide_cursor_vfx_particle_lifetime = 1.5
 end
