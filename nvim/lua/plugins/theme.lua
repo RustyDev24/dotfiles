@@ -1,11 +1,5 @@
 return {
   {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function() end,
-  },
-  {
     "rose-pine/neovim",
     name = "rose-pine",
     lazy = false,
@@ -72,17 +66,6 @@ return {
     end,
   },
   {
-    "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    opts = {
-      transparent_mode = true,
-    },
-  },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads first
-  },
-  {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
@@ -91,26 +74,4 @@ return {
       style = "moon",
     },
   },
-  {
-    "vague2k/vague.nvim",
-    config = function()
-      require("vague").setup({
-        -- optional configuration here
-      })
-    end,
-  },
-  {
-    "anAcc22/sakura.nvim",
-    dependencies = {
-      { "rktjmp/lush.nvim" },
-    },
-  },
-  {
-    "shaunsingh/nord.nvim",
-    config = function(_, opts)
-        vim.g.nord_italic = true
-        vim.g.nord_bold = true
-        vim.g.nord_borders = true
-    end
-  }
 }
