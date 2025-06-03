@@ -51,7 +51,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "100"
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font:h14"
