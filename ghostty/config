@@ -1,3 +1,4 @@
 font-family = "JetBrainsMono Nerd Font"
-font-size = 16
-theme = "catppuccin-mocha"
+font-size = 14
+theme = "rose-pine-moon"
+background-opacity = 0.7

@@ -10,7 +10,7 @@
   "modules-left": [
     "cpu",
     "memory",
-    "temperature",
+    "disk",
     "clock#date"
   ],
   "modules-center": [
@@ -19,6 +19,7 @@
   "modules-right": [
     // "mpd",
     "wireplumber",
+    "backlight",
     "network",
     "battery",
     "clock",
@@ -106,7 +107,7 @@
     "format": "  {}%",
   },
   "temperature": {
-    // "thermal-zone": 2,
+    "thermal-zone": 0,
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
@@ -119,7 +120,7 @@
   },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": [
       " ",
       " ",
@@ -138,13 +139,11 @@
       "warning": 30,
       "critical": 15,
     },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
     "format-icons": [
       " ",
       " ",
@@ -195,5 +194,15 @@
     "escape": true,
     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+  },
+
+  "disk": {
+    "interval": 30,
+    //"format": "󰋊",
+    "path": "/",
+    //"format-alt-click": "click",
+    "format": "󰋊 {percentage_used}%",
+    //"tooltip": true,
+    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
   },
 }

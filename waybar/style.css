@@ -122,6 +122,10 @@ button:hover {
     color: @mauve;
 }
 
+#backlight {
+  color: @sky;
+}
+
 /*#battery.charging,
 #battery.plugged {
     color: #ffffff;
@@ -179,11 +183,7 @@ label:focus {
 }
 
 #disk {
-    background-color: #964b00;
-}
-
-#backlight {
-    background-color: #90b1b1;
+    color: @maroon;
 }
 
 #network {
